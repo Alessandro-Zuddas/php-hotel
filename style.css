@@ -8,3 +8,32 @@
 
 /* RESET */
 
+.container{
+    width: 100%;
+}
+
+ul{
+    list-style: none;
+}
+
+.hotel-card{
+    padding: .9375rem .9375rem;
+    background-color: whitesmoke;
+    border: .0625rem solid black;
+    border-radius: .625rem;
+}
+
+h3{
+    padding-bottom: .3125rem;
+}
+
+input{
+    padding: .3125rem;
+}
+
+.filter-btn{
+    border-radius: .625rem;
+    border-color: lightgray;
+    background-color: whitesmoke;
+    padding: .3125rem .9375rem;
+}

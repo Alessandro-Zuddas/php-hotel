@@ -57,18 +57,39 @@
         <title>PHP Hotels</title>
     </head>
     <body>
+
+        <div class="container">
+            <h1 class="px-3 pt-2">Filtra per:</h1>
+            <form class="px-3 pt-3" action="GET">
+                <input type="text">
+                <input type="text">
+                <button class="filter-btn">Cerca</button>
+            </form>
+        </div>
         
-        <ul>
-            <?php foreach($hotels as $hotel) { ?>
-                <li>
-                    <h1> <?php echo $hotel["name"]; ?> </h1>
-                    <h3> <?php echo $hotel["description"]; ?> </h3>
-                    <h3> <?php echo $hotel["parking"]; ?> </h3>
-                    <h3> <?php echo $hotel["vote"]; ?> </h3>
-                    <h3> <?php echo $hotel["distance_to_center"]; ?> </h3>
-                </li>
-            <?php } ?>
-        </ul>
+        <div class="container">
+            <ul class="d-flex justify-content-between px-3 mt-5">
+                <?php foreach($hotels as $hotel) { ?>
+                    <li class="hotel-card col-2">
+                        <h1> <?php echo $hotel["name"]; ?> </h1>
+                        <hr>
+                        <h3> <?php echo $hotel["description"]; ?> </h3>
+                        <h3> 
+                            <?php 
+                                if($hotel["parking"]){ ?> 
+                                    <h3> Parking Available </h3> 
+                            <?php } ?>
+                            <?php 
+                                if(!$hotel["parking"]){ ?> 
+                                    <h3> Parking NOT Available </h3> 
+                            <?php } ?>
+                        </h3>
+                        <h3> <?php echo $hotel["vote"]; ?> </h3>
+                        <h3> <?php echo $hotel["distance_to_center"]; ?> </h3>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
 
 
         <!-- Bootstrap CDN -->
