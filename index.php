@@ -61,8 +61,24 @@
         <div class="container">
             <h1 class="px-3 pt-2">Filtra per:</h1>
             <form class="px-3 pt-3" action="GET">
-                <input type="text">
-                <input type="text">
+                <!-- Select parcheggio -->
+                <select name="parking-select" id="parking" required>
+                    <option value="" selected>Scegli un'opzione</option>
+                    <option value="true">Con parcheggio</option>
+                    <option value="false">Senza parcheggio</option>
+                </select>
+                <!-- /Select parcheggio -->
+                <!-- Select voto -->
+                <select name="rating-select" id="rating" required>
+                    <option value="" selected>Scegli un'opzione</option>
+                    <option value="0">0 Stelle</option>
+                    <option value="1">1 Stella</option>
+                    <option value="2">2 Stelle</option>
+                    <option value="3">3 Stelle</option>
+                    <option value="4">4 Stelle</option>
+                    <option value="5">5 Stelle</option>
+                </select>
+                <!-- /Select voto -->
                 <button class="filter-btn">Cerca</button>
             </form>
         </div>

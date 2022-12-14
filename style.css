@@ -27,8 +27,9 @@ h3{
     padding-bottom: .3125rem;
 }
 
-input{
+select{
     padding: .3125rem;
+    border-radius: .625rem;
 }
 
 .filter-btn{
